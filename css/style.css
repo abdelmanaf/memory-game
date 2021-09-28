@@ -2,15 +2,25 @@
 
 body {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 35px;
+    margin: 5% auto ;
+    color:blue;
 }
 
 .card {
     display: inline-block;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     background-color: darkkhaki;
-    cursor:grab;
+    cursor:pointer;
 }
 
 .card:hover {
@@ -40,4 +50,18 @@ body {
 }
 .cyan {
     background-color:cyan ;
+}
+
+.btn {
+    margin-top: 30px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    font-size: 30px;
+    width: 130px;
+    background-color:cornsilk;
+    color:blue;
+}
+
+.color-hidden {
+    background-color:white ;
 }

@@ -17,3 +17,8 @@ const gameEl = document.querySelector("#game");  // get all elements
 const buttonEl = document.querySelector("#reset-btn"); // get reset button element
 const messageEl = document.querySelector(".message");
 
+function resetState(){
+  click = 0 ;
+  colors = [];
+  refs = [];
+}

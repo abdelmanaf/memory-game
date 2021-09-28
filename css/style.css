@@ -5,6 +5,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url("./game-img.jpeg");
 
 }
 
@@ -12,7 +13,14 @@ h1 {
     font-family: 'Pacifico', cursive;
     font-size: 35px;
     margin: 5% auto ;
-    color:blue;
+    color: #F0A500;
+}
+
+.message {
+    font-family: 'Pacifico', cursive;
+    /* font-family:'Montserrat', sans-serif; */
+    color: yellowgreen;
+    text-align: center;
 }
 
 .card {
@@ -64,4 +72,8 @@ h1 {
 
 .color-hidden {
     background-color:white ;
+}
+
+#game {
+    text-align: center;
 }

@@ -15,6 +15,6 @@ https://abdelmanaf.github.io/memory-game/
 ![memory-game end image](https://i.imgur.com/JPPRaxQ.png)
 
 ### Technologies used
-JavaScript, 
+**JavaScript, 
 HTML, 
-CSS
+CSS**

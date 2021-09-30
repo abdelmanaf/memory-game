@@ -1,19 +1,21 @@
 
-
 body {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-image: url("./game-img.jpeg");
+}
 
+#game {
+    text-align: center;
 }
 
 h1 {
     font-family: 'Pacifico', cursive;
     font-size: 35px;
     margin: 5% auto ;
-    color: #F0A500;
+    color: blue;
 }
 
 .message {
@@ -29,6 +31,7 @@ h1 {
     height: 70px;
     background-color: darkkhaki;
     cursor:pointer;
+    margin: 15px;
 }
 
 .card:hover {
@@ -60,8 +63,11 @@ h1 {
     background-color:cyan ;
 }
 
+.color-hidden {
+    background-color:white ;
+}
+
 .btn {
-    margin-top: 30px;
     border: 3px solid #fff;
     border-radius: 50%;
     font-size: 30px;
@@ -70,10 +76,9 @@ h1 {
     color:blue;
 }
 
-.color-hidden {
-    background-color:white ;
+.transparent {
+    background-color: transparent;
 }
-
-#game {
-    text-align: center;
+.transparent:hover {
+    border: none;
 }

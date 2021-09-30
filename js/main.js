@@ -13,9 +13,9 @@ let matched = 0; // need to know when the game is over
 
 /*----- cached element references -----*/ 
 const gameEl = document.querySelector("#game");  // get all elements
-const buttonEl = document.querySelector("#reset-btn"); // get reset button element
 const messageEl = document.querySelector(".message"); // get h2 element
 const cardEls = document.querySelectorAll(".card");  // get all the cards
+const buttonEl = document.querySelector("#reset-btn"); // get reset button element
 
 
 
@@ -52,9 +52,7 @@ function handleClick(e){
               messageEl.textContent = "Congratulations, you win!!!";
             }
           }else {
-            const ref = document.querySelector(`[data-ref='${refs[0]}`);
-            ref.classList.add('color-hidden')
-            ref.dataset.hidden = "true";
+            hiddingBox();
             resetState();
           }
         }
@@ -73,11 +71,16 @@ function resetState(){
 
 function resetAllElements(){
   cardEls.forEach(el =>{
+    el.classList.remove('transparent')
       el.classList.add('color-hidden');
       el.dataset.hidden = true;
   })
   messageEl.textContent = "";
 }
 
+function hiddingBox(){
+  const ref = document.querySelector(`[data-ref='${refs[0]}`);
+  ref.classList.add('color-hidden')
+  ref.dataset.hidden = "true";
 
-
+}

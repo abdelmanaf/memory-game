@@ -84,3 +84,7 @@ h1 {
 .transparent:hover {
     border: none;
 }
+
+.card.disabled {
+    pointer-events: none;
+}

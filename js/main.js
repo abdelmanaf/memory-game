@@ -33,9 +33,16 @@ function handleClick(e){
   const getRef = el.dataset.ref;
   colors.push(getColor)
   refs.push(getRef)
-  if(isHidden === "true"){
+  if(isHidden){
       if (click === 0){ //check if it's the first time
+        el.classList.add("animate__animated");
+        el.classList.add("animate__flipInX");
         el.classList.remove('color-hidden');
+        // el.classList.add("disabled");
+        setTimeout(function(){
+          el.classList.remove("animate__animated");
+          el.classList.remove("animate__flipInX");
+        }, 4000);
         el.dataset.hidden = "false";
         click++;
       } else {
@@ -45,14 +52,15 @@ function handleClick(e){
             el.classList.remove('color-hidden');
             el.dataset.hidden = "false";
             matched++;
-            const refEl = document.querySelector(`[data-ref='${refs[0]}`);// make the divs disappear
-            refEl.classList.add('transparent');
+            hiddingBox();
             resetState();
             if(matched === 8){
               messageEl.textContent = "Congratulations, you win!!!";
             }
           }else {
-            hiddingBox();
+            const ref = document.querySelector(`[data-ref='${refs[0]}`);
+            ref.classList.add('color-hidden')
+            ref.dataset.hidden = "true";
             resetState();
           }
         }
@@ -79,8 +87,6 @@ function resetAllElements(){
 }
 
 function hiddingBox(){
-  const ref = document.querySelector(`[data-ref='${refs[0]}`);
-  ref.classList.add('color-hidden')
-  ref.dataset.hidden = "true";
-
+  const refEl = document.querySelector(`[data-ref='${refs[0]}`);// make the divs disappear
+  refEl.classList.add('transparent');
 }
